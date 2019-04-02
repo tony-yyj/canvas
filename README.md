@@ -1,2 +1,1 @@
-# canvas
-canvas练习
+# Canvas 练手项目
