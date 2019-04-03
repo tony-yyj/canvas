@@ -8,6 +8,10 @@ const router: Routes = [
     {
         path: 'trigonometry',
         loadChildren: './trigonometry/trigonometry.module#TrigonometryModule',
+    },
+    {
+        path: 'basic',
+        loadChildren: './basic/basic.module#BasicModule',
     }
 ];
 

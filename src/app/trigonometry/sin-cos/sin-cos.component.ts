@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import Point from "./point";
+import Point from "../../util/point";
 
 @Component({
     selector: 'app-sin-cos',
@@ -77,7 +77,7 @@ export class SinCosComponent implements OnInit, AfterViewInit {
         const y = this.axisConfig.origin.y - Math.sin(radians) * this.cycleConfig.radius;
         if (this.angle < 360) {
             this.sinLineArr.push(new Point(x, y));
-            this.angle += 1;
+            this.angle += 3;
         } else {
             if (this.sinLineArr.length) {
                 this.sinLineArr.shift();
