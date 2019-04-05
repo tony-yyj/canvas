@@ -4,6 +4,7 @@ import {LineComponent} from './line/line.component';
 import {RouterModule, Routes} from "@angular/router";
 import {BezierOneComponent,} from "./line/some-line/bezier-one.component";
 import {FormsModule} from "@angular/forms";
+import {BezierTwoComponent} from "./line/some-line/bezier-two.component";
 
 const router: Routes = [
     {
@@ -21,6 +22,7 @@ const router: Routes = [
     declarations: [
         LineComponent,
         BezierOneComponent,
+        BezierTwoComponent,
     ],
     imports: [
         CommonModule,

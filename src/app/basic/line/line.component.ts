@@ -12,7 +12,7 @@ enum RoleEnum {
 })
 export class LineComponent implements OnInit {
 
-    role: number = RoleEnum.ONE;
+    role: number = RoleEnum.TWO;
 
     RoleEnum = RoleEnum;
     lineConfig = {

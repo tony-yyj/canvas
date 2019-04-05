@@ -2,22 +2,11 @@
     <h3>画线规则</h3>
     <ul>
         <li>
-            <input #roleOne
-                id="role1"
-                type="checkbox"
-                [(ngModel)]="role"
-                [value]="RoleEnum.ONE"
-            />
-            <label for="role1">规则一：一起开始一起结束</label>
+            <a [ngClass]="{'active': role === RoleEnum.ONE}" (click)="role = RoleEnum.ONE">规则一：一起开始一起结束</a>
         </li>
 
         <li>
-            <input #roleTwo
-                id="role2"
-                type="checkbox"
-                [value]="RoleEnum.TWO"
-            />
-            <label for="role2">规则二：你方唱罢我登场</label>
+            <a [ngClass]="{'active': role === RoleEnum.TWO}" (click)="role = RoleEnum.TWO">规则二：你方唱罢我登场</a>
         </li>
     </ul>
 </div>
@@ -27,4 +16,11 @@
         *ngIf="role === RoleEnum.ONE"
         [lineConfig]="lineConfig"
     ></app-line-bezier-one>
+
+
+    <app-line-bezier-two
+        *ngIf="role === RoleEnum.TWO"
+        [lineConfig]="lineConfig"
+    ></app-line-bezier-two>
+
 </div>
