@@ -25,6 +25,7 @@ export default class BezierLine {
     }
 
     /**
+     * 获得贝塞尔曲线上的点
      * B(t) = (1 - t)^2 * P0 + 2t * (1 - t) * P1 + t^2 * P2, t ∈ [0,1]
      * @param t  曲线长度比例
      */

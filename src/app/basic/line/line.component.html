@@ -1,5 +1,30 @@
+<div class="menu">
+    <h3>画线规则</h3>
+    <ul>
+        <li>
+            <input #roleOne
+                id="role1"
+                type="checkbox"
+                [(ngModel)]="role"
+                [value]="RoleEnum.ONE"
+            />
+            <label for="role1">规则一：一起开始一起结束</label>
+        </li>
+
+        <li>
+            <input #roleTwo
+                id="role2"
+                type="checkbox"
+                [value]="RoleEnum.TWO"
+            />
+            <label for="role2">规则二：你方唱罢我登场</label>
+        </li>
+    </ul>
+</div>
+
 <div class="content">
-    <canvas #canvas width="800" height="500">
-        not support!
-    </canvas>
+    <app-line-bezier-one
+        *ngIf="role === RoleEnum.ONE"
+        [lineConfig]="lineConfig"
+    ></app-line-bezier-one>
 </div>
