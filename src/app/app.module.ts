@@ -12,6 +12,10 @@ const router: Routes = [
     {
         path: 'basic',
         loadChildren: './basic/basic.module#BasicModule',
+    },
+    {
+        path: 'css',
+        loadChildren: './css/css.module#CssModule'
     }
 ];
 
